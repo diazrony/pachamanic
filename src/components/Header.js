@@ -31,10 +31,10 @@ export const Header = () => {
                         <Link onClick={() => {setisActive(!isActive)}} to='/aplication' class="navbar-item">
                                 <b>Aplicación</b>
                         </Link>
-                        <Link onClick={() => {setisActive(!isActive)}} to='/aplication' class="navbar-item">
+                        <Link onClick={() => {setisActive(!isActive)}} to='/presentations' class="navbar-item">
                                 <b>Presentaciónes</b>
                         </Link>
-                        <Link onClick={() => {setisActive(!isActive)}} to='/aplication' class="navbar-item">
+                        <Link onClick={() => {setisActive(!isActive)}} to='/contact' class="navbar-item">
                                 <b>Contacto</b>
                         </Link>
                         
