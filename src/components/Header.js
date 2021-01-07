@@ -26,18 +26,18 @@ export const Header = () => {
                 <div id="navbarExampleTransparentExample" className={`navbar-menu ${isActive ? "is-active" : ""}`}>
                     <div className="navbar-start">
                         <Link onClick={() => {setisActive(!isActive)}} to='/' class="navbar-item">
-                                Home
+                                <b>Home</b> 
                         </Link>
-                        <div className="navbar-item has-dropdown is-hoverable">
-                            <Link onClick={() => {setisActive(!isActive)}} to='/' class="navbar-item">
-                                    Docs
-                            </Link>
-                            <div className="navbar-dropdown is-boxed">
-                                <Link onClick={() => {setisActive(!isActive)}} to='/' class="navbar-item">
-                                        Other
-                                </Link>
-                            </div>
-                        </div>
+                        <Link onClick={() => {setisActive(!isActive)}} to='/aplication' class="navbar-item">
+                                <b>Aplicación</b>
+                        </Link>
+                        <Link onClick={() => {setisActive(!isActive)}} to='/aplication' class="navbar-item">
+                                <b>Presentaciónes</b>
+                        </Link>
+                        <Link onClick={() => {setisActive(!isActive)}} to='/aplication' class="navbar-item">
+                                <b>Contacto</b>
+                        </Link>
+                        
                     </div>
 
                     <div className="navbar-end">

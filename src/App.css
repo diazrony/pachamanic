@@ -16,6 +16,9 @@
 .color-pac {
     color: #008037;
 }
+.height-card {
+    height: 30em;
+}
 @media (max-width: 700px)  { 
     .img-media {
         display: none;

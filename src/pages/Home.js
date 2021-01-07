@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import abono from '../assets/img/Bolsas-abono-pachamanic.png'
 import homeImg from '../assets/img/home-img.svg'
@@ -8,6 +8,16 @@ import valueHome from '../assets/img/value-home.svg'
 
 
 export const Home = () => {
+    useEffect(() => {
+        scroll();
+    })
+    let scroll = () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        })
+    }
     return (
         <div className='container mt-8'>
             <div className="columns  is-multiline mt-5">
