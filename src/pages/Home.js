@@ -15,7 +15,8 @@ export const Home = () => {
                     <img src={abono} alt="Bolsas de abono"/>
                 </div>
                 <div className="column is-6 box-center mt-5 is-centered ">
-                    <h1 className='text-center title is-1'>¡Bienvenido a Pachamanic! <br/> Por un mundo más verde </h1>
+                    <h1 className='text-center title is-1'>¡Bienvenido a Pachamanic!</h1>
+                    <h1 className='text-center title is-3'>Por un mundo más verde </h1>
                     <Link to='/' className='button is-success is-large' >Registrate</Link>
                 </div>
                 <div className="column box-center is-centered is-6  ">
