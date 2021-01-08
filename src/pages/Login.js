@@ -5,7 +5,7 @@ import GoogleLogin from 'react-google-login'
 export const Login = (props) => {
     const responseSuccessGoogle = (res) => {
         console.log(res);
-        axios.post('http://localhost:3001/google', {idtoken: res.tokenId})
+        axios.post('https://apiudlrdandug.herokuapp.com/google', {idtoken: res.tokenId})
             .then( res => {
                 window.localStorage.setItem('token', JSON.stringify(res.data));
                 props.history.push('/admin')
@@ -21,12 +21,12 @@ export const Login = (props) => {
                 <div className="column text-center box-center">
                     <h1 className='title is-2'> Genial...!!!</h1>
                     <h2 className='title is-3'> Estas a punto de entrar a la sección administrativa</h2>
-                    <h2 className='title is-4'>Registrate</h2>
+                    <h2 className='title is-4'>Registrate / Login</h2>
                 </div>
                 <div className="column box-center">
                     <GoogleLogin
                         clientId="486105028590-uudenu4qbnencsiec6tb67fpmov3r0jj.apps.googleusercontent.com"
-                        buttonText="Registrate con Google"
+                        buttonText="Register / Login with Google"
                         onSuccess={responseSuccessGoogle}
                         onFailure={responseErrorGoogle}
                         cookiePolicy={'single_host_origin'}
