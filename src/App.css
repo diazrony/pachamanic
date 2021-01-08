@@ -19,8 +19,28 @@
 .height-card {
     height: 30em;
 }
+.google-btn {
+    display: block;
+}
+.flecha-admin {
+    font-size: 15em;
+    color:  #008037;
+}
+.img-admin {
+    border-radius: 50%;
+    width: 30%;
+}
+.title-fecha {
+    color: #008037;
+    font-size: 1.3em;
+}
 @media (max-width: 700px)  { 
     .img-media {
         display: none;
+    }
+}
+@media (min-width: 700px)  { 
+    .google-btn {
+        display: block;
     }
 }

@@ -12,8 +12,18 @@ export const Presentations = () => {
         })
     }
     return (
-        <div>
-            <h1>Presentation</h1>
+        <div  className='container mt-8'>
+            <div className="columns is-multiline">
+                <div className="column is-12 box-center text-center">
+                    <h1 className='title is-1' >Presentaciones</h1>
+                </div>
+                <div className="column is-6 box-center text-center">
+                    <h1 className='title is-1' >Canvas</h1>
+                </div>
+                <div className="column is-6 box-center text-center">
+                    <h1 className='title is-1' >Canvas</h1>
+                </div>
+            </div>
         </div>
     )
 }

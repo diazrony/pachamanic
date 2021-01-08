@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-export const Contact = () => {
+export const AdminCostos = () => {
     useEffect(() => {
         scroll();
     })
@@ -25,5 +25,6 @@ export const Contact = () => {
                 </div>
             </div>
         </div>
+        
     )
 }
