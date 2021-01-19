@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import emailjs from 'emailjs-com';
 import SweetAlert from 'sweetalert2-react';
+import { LoaderPage } from '../pages/LoaderPage';
 
 const validate = values => {
     const errors = {};
@@ -19,7 +20,8 @@ export default class ContactForm extends Component {
 
     state = {
         errors: {sendButton: true},
-        show: false
+        show: false,
+        loading: false
     }
     handleChange = ({target}) => {
         const {name, value} = target;
@@ -34,15 +36,15 @@ export default class ContactForm extends Component {
         if (Object.keys(result).length || null ) {
             return this.setState({errors: result})
         }else {
-            this.state.errors = {};
-            emailjs.send('service_axm138j',"template_p22uvkh",{name: errorsLess.name, email: errorsLess.email, message: errorsLess.message}, "user_QaiQuaMKR3FID7WNlOIqG")
+            this.setState({ errors : {}});
+            emailjs.send('service_axm138j',"template_b9v6lt9",{name: errorsLess.name, email: errorsLess.email, message: errorsLess.message}, "user_QaiQuaMKR3FID7WNlOIqG")
             .then(result => {
                 this.setState({
                     show:true,
                     name: '',
                     message: '',
-                    service: 'Select Service',
-                    email: ''
+                    email: '',
+                    loading: false
                 })
                 console.log(result.text);
             }, (error) => {
@@ -53,6 +55,9 @@ export default class ContactForm extends Component {
         
     }
     render() {
+        if (this.state.loading === true) {
+            return <LoaderPage/>
+        }
         const {errors} = this.state
         return (
             <div id="form" className="card container p-5">
@@ -114,8 +119,8 @@ export default class ContactForm extends Component {
                 </form>
                 <SweetAlert
                     show={this.state.show}
-                    title='General Cleaning services LLC'
-                    text="Send Message!!!"
+                    title='Pachamanic ha recibido tu correo'
+                    text="Sigue navegando"
                     onConfirm={() => this.setState({ show: false })}
                 />
             </div>

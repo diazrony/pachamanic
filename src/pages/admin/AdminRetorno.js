@@ -12,7 +12,7 @@ export const AdminRetorno = () => {
         })
     }
     return (
-        <div  className='container mt-8'>
+        <div  className='container p-5 mt-8'>
             <div className="columns is-multiline">
                 <div className="column is-12 box-center text-center">
                     <h1 className='title is-1' >Retorno de Inversión</h1>
